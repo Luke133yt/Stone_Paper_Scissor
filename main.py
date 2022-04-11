@@ -1,47 +1,58 @@
 import random
 
-possibility = ['Stone', 'Paper', 'Scissors']
+def main():
 
-x = input('1) Stone\n2)Paper\n3)Scissors\n\nChoose:')
+    x = input('1) Stone\n2)Paper\n3)Scissors\n\nChoose:')
+    simulation(x)
 
-if x == 1 or x.lower() == 'stone':
-    n = random.randint(0,2)
-    are = possibility[n]
-    print('Opponent: ' + are)
+def simulation(x):
 
-    if are == 'Stone':
-        print('DRAW')
+    possibility = ['Stone', 'Paper', 'Scissors']
 
-    if are == 'Scissors':
-        print('YOU WIN')
+    if x == '1' or x.lower() == 'stone':
+        n = random.randint(0,2)
+        are = possibility[n]
+        print('Opponent: ' + are)
 
-    if are == 'Paper':
-        print('YOU LOSE')
+        if are == 'Stone':
+            print('DRAW')
 
-if x == 2 or x.lower() == 'paper':
-    n = random.randint(0,2)
-    are = possibility[n]
-    print('Opponent: ' + are)
+        if are == 'Scissors':
+            print('YOU WIN')
 
-    if are == 'Stone':
-        print('YOU WIN')
+        if are == 'Paper':
+            print('YOU LOSE')
 
-    if are == 'Scissors':
-        print('YOU LOSE')
+    elif x == '2' or x.lower() == 'paper':
+        n = random.randint(0,2)
+        are = possibility[n]
+        print('Opponent: ' + are)
 
-    if are == 'Paper':
-        print('DRAW')
+        if are == 'Stone':
+            print('YOU WIN')
 
-if x == 3 or x.lower() == 'scissors':
-    n = random.randint(0,2)
-    are = possibility[n]
-    print('Opponent: ' + are)
+        if are == 'Scissors':
+            print('YOU LOSE')
 
-    if are == 'Stone':
-        print('YOU LOSE')
+        if are == 'Paper':
+            print('DRAW')
 
-    if are == 'Scissors':
-        print('DRAW')
+    elif x == '3' or x.lower() == 'scissors':
+        n = random.randint(0,2)
+        are = possibility[n]
+        print('Opponent: ' + are)
 
-    if are == 'Paper':
-        print('YOU WIN')
+        if are == 'Stone':
+            print('YOU LOSE')
+
+        if are == 'Scissors':
+            print('DRAW')
+
+        if are == 'Paper':
+            print('YOU WIN')
+
+    else:
+        print('Error, Wrong input') #i know i can make a try catch, but i don't want
+
+if __name__ == '__main__':
+    main()
